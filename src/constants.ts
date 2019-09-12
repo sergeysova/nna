@@ -2,6 +2,12 @@ import { BinaryReader } from "./reader";
 import { BinaryWriter } from "./writer";
 import { Message } from "./message";
 
+export declare class Buffer implements ArrayBuffer {
+  [Symbol.toStringTag]: string;
+  readonly byteLength: number;
+  slice(begin: number, end?: number): ArrayBuffer;
+}
+
 /**
  * Base interface class for all const messages.
  * @interface
@@ -33,7 +39,7 @@ export interface BinaryMessage extends ConstBinaryMessage {}
  * The types convertible to Uint8Arrays. Strings are assumed to be
  * base64-encoded.
  */
-export type ByteSource = ArrayBuffer | Uint8Array | number[] | string;
+export type ByteSource = ArrayBuffer | Buffer | Uint8Array | number[] | string;
 
 /**
  * A scalar field can be a boolean, number, or string.
