@@ -1,0 +1,15 @@
+{
+  "name": "nna",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/github:sergeysova/nna",
+  "author": "Sergey Sova <mail@sergeysova.com> (https://sergeysova.com/)",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.3"
+  }
+}
